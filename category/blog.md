@@ -1,7 +1,7 @@
 ---
 layout: category
-title: Blog
-slug: blog
-description: A category for general blog posts.
+title: Lab 1 part 1
+slug: Lab 1 part 1
+description: Setting up the artemis
 ---
 
