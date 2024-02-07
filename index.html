@@ -537,20 +537,87 @@
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Bluetooth</h2>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                    nostrum, reiciendis facere nemo!</p>
+
+                                <p>The goal of this lab was to establish a bluetooth connection with the artemis
+                                    and our own computers. Another goal of this lab was to establish more
+                                    familiarity with the arduino_ble library which can be accessed here:
+                                    https://www.arduino.cc/reference/en/libraries/arduinoble/
+                                </p>
                                 <ul class="list-inline">
                                     <li>
-                                        <strong>Client:</strong>
-                                        Explore
-                                    </li>
-                                    <li>
-                                        <strong>Category:</strong>
-                                        Graphic Design
+                                        <strong>Parts required:</strong>
+                                        1 x SparkFun RedBoard Artemis Nano, 1 x USB C-to-C or A-to-C cable (same as the
+                                        first part of the lab)
                                     </li>
                                 </ul>
+                                <h3 class="text-uppercase">Prelab</h3>
+                                <p>The goal of this prelab was to help us get familiar with the arduino_ble codebase and
+                                    also install the
+                                    python environment that most of the lab would take place in. The code used to create
+                                    the working jupyter notebook is below:
+                                </p>
+
+                                <code>
+                                    python3 -m pip install --user virtualenv<br>
+                                    python3 -m venv FastRobots_ble<br>
+                                </code>
+                                <p>
+                                    The following code was how to activate/deactivate the jupyter notebook in the
+                                    working directory.
+                                </p>
+                                <code>
+                                    source FastRobots_ble/bin/activate<br>
+                                    deactivate<br>
+                                </code>
+
+                                <h3 class="text-uppercase">Task 1: LED Blink</h3>
+                                <p>This first task involved uploading example code that would cause the LED to flash
+                                    once uploaded to the artemis</p>
+                                <div class="embed-container">
+                                    <iframe width="560" height="315" src=https://www.youtube.com/embed/YrEPtJ0ZpbI
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                                <h3 class="text-uppercase">Task 2: Serial</h3>
+                                <p>This second task made sure that the serial ports of the board were working properly
+                                    so that we can send and
+                                    receive signals from these ports.</p>
+                                <div class="embed-container">
+                                    <iframe width="560" height="315" src=https://youtube.com/embed/I97tiFcIRK4?feature
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+
+
+                                <h3 class="text-uppercase">Task 3: Analog read</h3>
+                                <p>This task asked us to test the sensors by uploading the example code and then blowing
+                                    onto the board.
+                                    This would cause changes in the reading in the activity monitor. </p>
+                                <div class="embed-container">
+                                    <iframe width="560" height="315" src=https://youtube.com/embed/PIPMUnY7zzo
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+
+
+                                <h3 class="text-uppercase">Task 4: Microphone</h3>
+                                <p>Similar to the last part, this part asked us to upload the example code to the board
+                                    and speak into the board at different volumes.
+                                    This tests the microphone on the board, and the expected output is that there will
+                                    be changes in readings.
+                                </p>
+                                <div class="embed-container">
+                                    <iframe width="560" height="315" src=https://youtube.com/embed/JbMQ__ar0-M
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+
+
+
+
+
+
+
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
                                     type="button">
                                     <i class="fas fa-xmark me-1"></i>
