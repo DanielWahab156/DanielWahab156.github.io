@@ -590,49 +590,68 @@
 
                                 <img class="img-fluid img-centered" src="assets/service.png" alt="">
 
-                                <h3 class="text-uppercase">Task 1: LED Blink</h3>
-                                <p>This first task involved uploading example code that would cause the LED to flash
-                                    once uploaded to the artemis</p>
-                                <div class="embed-container">
-                                    <iframe width="560" height="315" src=https://www.youtube.com/embed/YrEPtJ0ZpbI
-                                        frameborder="0" allowfullscreen></iframe>
-                                </div>
-
-                                <h3 class="text-uppercase">Task 2: Serial</h3>
-                                <p>This second task made sure that the serial ports of the board were working properly
-                                    so that we can send and
-                                    receive signals from these ports.</p>
-                                <div class="embed-container">
-                                    <iframe width="560" height="315" src=https://youtube.com/embed/I97tiFcIRK4?feature
-                                        frameborder="0" allowfullscreen></iframe>
-                                </div>
+                                <h3 class="text-uppercase">Task 1: ECHO</h3>
+                                <p>This first task involved creating a new command, ECHO, which sends a string to the
+                                    artemis
+                                    rx_characteristic_string which is then recieved back to the artemis. This lab is
+                                    completed by writing code on
+                                    arduino side, appending it to an estring value, and appending it to the
+                                    tx_characteristic_string. </p>
 
 
+                                <img class="img-fluid img-centered" src="assets/arduinolab1task1.png" alt="">
 
-                                <h3 class="text-uppercase">Task 3: Analog read</h3>
-                                <p>This task asked us to test the sensors by uploading the example code and then blowing
-                                    onto the board.
-                                    This would cause changes in the reading in the activity monitor. </p>
-                                <div class="embed-container">
-                                    <iframe width="560" height="315" src=https://youtube.com/embed/PIPMUnY7zzo
-                                        frameborder="0" allowfullscreen></iframe>
-                                </div>
+                                <img class="img-fluid img-centered" src="assets/pythonlab1task1.png" alt="">
 
-
-
-                                <h3 class="text-uppercase">Task 4: Microphone</h3>
-                                <p>Similar to the last part, this part asked us to upload the example code to the board
-                                    and speak into the board at different volumes.
-                                    This tests the microphone on the board, and the expected output is that there will
-                                    be changes in readings.
+                                <h3 class="text-uppercase">Task 2: Get_Time_Millis</h3>
+                                <p>This second task asked us to create a new command again, but this time the goal of
+                                    the command was to print out the current time. I used a similar process as last time
+                                    (appending to tx_characteristic_string) to
+                                    send the time to the board so it can be displayed in python. This time, I just used
+                                    the millis() function to access the time.
                                 </p>
-                                <div class="embed-container">
-                                    <iframe width="560" height="315" src=https://youtube.com/embed/JbMQ__ar0-M
-                                        frameborder="0" allowfullscreen></iframe>
-                                </div>
+
+                                <img class="img-fluid img-centered" src="assets/arduinolab1task2.png" alt="">
+
+                                <img class="img-fluid img-centered" src="assets/pythonlab1task2.png" alt="">
 
 
 
+
+
+                                <h3 class="text-uppercase">Task 3: Notification Handler</h3>
+                                <p>This third task consisted of creating a notification handler which is done with
+                                    ble.start_notify.
+                                    The first argument is the RX_String which is what we want to be notified of when
+                                    changes are occuring.
+                                    The next argument if the function for a notification handler which we created.
+                                </p>
+
+                                <img class="img-fluid img-centered" src="assets/pythonlab1task3.png" alt="">
+
+
+
+
+
+                                <h3 class="text-uppercase">Task 5: Sending Time Data</h3>
+                                <p>For this part, the goal was to update the time in an array in the loop function and
+                                    read
+                                    through the array in a new created command. This was done by declaring a new array
+                                    in loop and updating it per millisecond.
+                                    After, the reading through was done in a seperate command.
+                                </p>
+                                <img class="img-fluid img-centered" src="assets/lab1task51.png" alt="">
+                                <img class="img-fluid img-centered" src="assets/lab1task52.png" alt="">
+
+
+                                <h3 class="text-uppercase">Task 7: Comparing methods</h3>
+                                <p>In terms of efficiency, both methods have there upsides and downsides.
+                                    The first method is better for constant updates while the second method is better
+                                    when we need to check when data is sent.
+                                    In terms of how quickly data is sent, since data is 16 bits, the microcontroller
+                                    runs at 150 Hz, and we use 3072000 bits of data we can store almost 1300 bits/sec
+                                    before running out of data.
+                                </p>
 
 
 
