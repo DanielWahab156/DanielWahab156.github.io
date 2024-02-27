@@ -786,10 +786,72 @@
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                    nostrum, reiciendis facere nemo!</p>
+                                <p> The main objective for this lab is to equip multiple ToF sensors onto the robot so
+                                    it can get more sample readings at a faster rate. This allows for the robot to
+                                    get more accurate and much faster data readings. Using 2 Time of Flight sensors
+                                    allow us to gain better coverage,
+                                    improving accuracy and speed.
+                                </p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Parts required:</strong>
+                                        Sparkfun Artemis Nano, 1x USB cable, 2x 4m ToF sensor, 1x QWIIC Breakout Board,
+                                        2x QWIIC connectors, 1x ruler
+                                    </li>
+                                </ul>
+                                <h3 class="text-uppercase">Prelab</h3>
+                                <p>The goal of the prelab was to have an idea of the wiring schematic for the project.
+                                    The prelab served to help you plan out how you were to solder the two ToF sensors
+                                    onto the
+                                    QWIIC connect cables and to the artemis. My sample schematic can be seen below. The
+                                    wires were
+                                    connected to the ports they were meant for on the ToF sensors. The single wire
+                                    between one ToF
+                                    sensor and the artemis was to shut off the board to give both sensors different I2C
+                                    addresses since the default
+                                    I2C address is 0x52.
+                                </p>
+
+                                <img class="img-fluid img-centered" src="assets/wiring.JPG" alt="">
+
+                                <h3 class="text-uppercase">Task 1: Single ToF Sensor</h3>
+                                <p>This first task involved soldering on one of the ToF sensors to the QWIIC
+                                    connect cables and plugging them into the board. This gave us distance readings
+                                    whenever
+                                    moving around the TOF sensor. A video can be shown below with the readings recieved
+                                    from the TOF sensor.
+                                    The picture below also shows the wiring used for the single ToF sensor. The picture
+                                    also shows the wiring used for the TOF sensor.
+                                </p>
+                                <div class="embed-container">
+                                    <iframe width="560" height="315" src=https://youtube.com/embed/vk_x2BCBwII?feature
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <img class="img-fluid img-centered" src="assets/TOF1.JPG" alt="">
+
+
+
+                                <h3 class="text-uppercase">Determining Distance Mode</h3>
+                                <p>For this lab, we had available two different distance modes to choose from. Either
+                                    short distance
+                                    or long. The long distance is better for more accurate readings from further away
+                                    but take longer to transmit.
+                                    The short distance is better for much quicker readings but may not be as accurate. I
+                                    went for the short distance mode in my code.
+                                </p>
+                                <div class="embed-container">
+                                    <iframe width="560" height="315" src=https://youtube.com/embed/I97tiFcIRK4?feature
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+
+
+                                <h3 class="text-uppercase">Task 3: Analog read</h3>
+                                <p>Another interesting thing that showed up was the fact that </p>
+                                <div class="embed-container">
+                                    <iframe width="560" height="315" src=https://youtube.com/embed/PIPMUnY7zzo
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
                                 <ul class="list-inline">
                                     <li>
                                         <strong>Client:</strong>
