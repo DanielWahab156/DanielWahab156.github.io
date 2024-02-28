@@ -820,14 +820,25 @@
                                     whenever
                                     moving around the TOF sensor. A video can be shown below with the readings recieved
                                     from the TOF sensor.
-                                    The picture below also shows the wiring used for the single ToF sensor. The picture
-                                    also shows the wiring used for the TOF sensor.
+                                    The picture below also shows the wiring used for the single ToF sensor.
                                 </p>
                                 <div class="embed-container">
                                     <iframe width="560" height="315" src=https://youtube.com/embed/vk_x2BCBwII?feature
                                         frameborder="0" allowfullscreen></iframe>
                                 </div>
-                                <img class="img-fluid img-centered" src="assets/TOF1.JPG" alt="">
+                                <img class="img-fluid img-centered" src="assets/TOF1.JPG" alt="" width="300"
+                                    height="200">
+
+                                <p>
+                                    One part of the lab involves checking the I2C address by uploading the exaple of
+                                    Wire-to-I2C onto the board and reading the address that is printed out. When
+                                    analyzing the
+                                    output, it was observed that the address printed out was 0x29. This was not the
+                                    expected
+                                    outcome because in the manual, the default I2C address was supposed to be 0x52.
+                                </p>
+                                <img class="img-fluid img-centered" src="assets/lab3I2C.png" alt="" width="300"
+                                    height="200">
 
 
 
@@ -868,13 +879,24 @@
                                     the same time.
                                     The picture of the setup with the simultaneous distance measurements is below.
                                 </p>
-                                <img class="img-fluid img-centered" src="assets/TOF2.png" alt="">
+                                <img class="img-fluid img-centered" src="assets/TOF2.jpg" alt="" width="300"
+                                    height="200">
                                 <img class="img-fluid img-centered" src="assets/lab3dualreadings.png" alt="">
+                                <img class="img-fluid img-centered" src="assets/lab3shutdown.png" alt="">
 
 
                                 <h3 class="text-uppercase">Task 6: ToF Sensor Speed</h3>
+                                <p>
+                                    The second to last task involves looking at the speed of readings and analyzing what
+                                    limiting factor ends up being. For this, I coded a new function into arduino that
+                                    would print
+                                    out the time whenever both distance sensors were ready. A snippet of the code is
+                                    shown below. what
+                                    I analyzed was that the delay was about 5000us.
 
-                                <h3 class="text-uppercase">Task 7: ToF Time vs Distance</h3>
+                                </p>
+                                <img class="img-fluid img-centered" src="assets/lab3codesnip.png" alt="">
+
 
 
                                 <ul class="list-inline">
