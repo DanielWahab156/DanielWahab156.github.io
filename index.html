@@ -158,8 +158,7 @@
                             <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Southwest</div>
-                            <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                            <div class="portfolio-caption-heading">Lab 4: Motor Driver</div>
                         </div>
                     </div>
                 </div>
@@ -678,62 +677,74 @@
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project details-->
-                                <h2 class="text-uppercase">Lab 3: Time of Flight Sensors</h2>
-
+                                <h2 class="text-uppercase">Lab 2: IMU</h2>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
-                                <p> The main objective for this lab is to equip multiple ToF sensors onto the robot so
-                                    it can get more sample readings at a faster rate. This allows for the robot to
-                                    get more accurate and much faster data readings. Using 2 Time of Flight sensors
-                                    allow us to gain better coverage,
-                                    improving accuracy and speed.
+                                <p>
+                                    The main objective of the lab was to test getting readings from the inertial
+                                    measurement unit
+                                    and use the accelerometer and gyroscope reats to translate them into data values for
+                                    pitch and roll.
                                 </p>
                                 <ul class="list-inline">
                                     <li>
                                         <strong>Parts required:</strong>
-                                        Sparkfun Artemis Nano, 1x USB cable, 2x 4m ToF sensor, 1x QWIIC Breakout Board,
-                                        2x QWIIC connectors, 1x ruler
+                                        Sparkfun Artemis Nano, 1x USB cable, 9DOF IMU sensor, 1x Force1RC car,
+                                        1x Li-ion 3.7V 850mAh battery
                                     </li>
                                 </ul>
                                 <h3 class="text-uppercase">Prelab</h3>
-                                <p>The goal of the prelab was to have an idea of the wiring schematic for the project.
-                                    The prelab served to help you plan out how you were to solder the two ToF sensors
-                                    onto the
-                                    QWIIC connect cables and to the artemis. My sample schematic can be seen below. The
-                                    wires were
-                                    connected to the ports they were meant for on the ToF sensors. The single wire
-                                    between one ToF
-                                    sensor and the artemis was to shut off the board to give both sensors different I2C
-                                    addresses since the default
-                                    I2C address is 0x52.
+                                <p>The goal of the prelab wasnt to mainly look over some of the documentation
+                                    of the IMU and its correcponding libraries which can be seen in the links on the lab
+                                    manuals.
                                 </p>
 
                                 <img class="img-fluid img-centered" src="assets/wiring.JPG" alt="">
 
-                                <h3 class="text-uppercase">Task 1: Single ToF Sensor</h3>
-                                <p>This first task involved soldering on one of the ToF sensors to the QWIIC
-                                    connect cables and plugging them into the board. This gave us distance readings
-                                    whenever
-                                    moving around the TOF sensor. A video can be shown below with the readings recieved
-                                    from the TOF sensor.
-                                    The picture below also shows the wiring used for the single ToF sensor. The picture
-                                    also shows the wiring used for the TOF sensor.
+                                <h3 class="text-uppercase">Task 1: Setting up</h3>
+                                <p>The first tasks involves setting up the IMU and running the example1_basics code in
+                                    the
+                                    ICM sparkfun library. A picture of the connection between the IMU and redboard can
+                                    be seen below.
                                 </p>
-                                <div class="embed-container">
-                                    <iframe width="560" height="315" src=https://youtube.com/embed/vk_x2BCBwII?feature
-                                        frameborder="0" allowfullscreen></iframe>
-                                </div>
-                                <img class="img-fluid img-centered" src="assets/TOF1.JPG" alt="">
-
-
-
-                                <h3 class="text-uppercase">Determining Distance Mode</h3>
-                                <p>For this lab, we had available two different distance modes to choose from. Either
-                                    short distance
-                                    or long. The long distance is better for more accurate readings from further away
-                                    but take longer to transmit.
-                                    The short distance is better for much quicker readings but may not be as accurate. I
-                                    went for the short distance mode in my code.
+                                <img class="img-fluid img-centered" src="assets/lab2IMU.JPG" alt="">
+                                <p>
+                                    Firs step was to upload the code the to the board and get the IMU readings.
+                                    Something
+                                    interesting came up when uploading the code for the first time. when the AD0_Val is
+                                    1, readings cannot
+                                    be recieved from the IMU. This defines the last bit of the I2C address which
+                                    controls whether
+                                    the address is actually sent through. It’s default is 1 but we set it to 0 to get
+                                    readings from the IMU.
                                 </p>
+
+                                <img class="img-fluid img-centered" src="assets/IMUFAIL.png" alt="">
+
+                                <p>
+                                    After getting the IMU readings displayed, we were able to get the data from the
+                                    accelerometer
+                                    needed. In the picture below, the code i used to calculate the accelerometer
+                                    pitch/roll
+                                    can be seen along with the live readings for all measurements.
+                                </p>
+                                <img class="img-fluid img-centered" src="assets/IMUWORK.png" alt="">
+
+
+
+                                <h3 class="text-uppercase">Task 2: Accelerometer Graph</h3>
+                                <p>The next task for this lab was to get the pitch and roll readings and graph them
+                                    between the angles
+                                    of -90 and 90. This was done using serial plotter in the arduino ide and making an
+                                    if statement to
+                                    print values to the serial monitor if the values of pitch and roll are between this
+                                    ranges. Using This
+                                    method I was able to find the positions and angles where pitch and roll were at
+                                    these extreme values.
+                                </p>
+                                <img class="img-fluid img-centered" src="assets/IMUWORK.png" alt="">
+                                <img class="img-fluid img-centered" src="assets/IMUWORK.png" alt="">
+
+
                                 <div class="embed-container">
                                     <iframe width="560" height="315" src=https://youtube.com/embed/I97tiFcIRK4?feature
                                         frameborder="0" allowfullscreen></iframe>
@@ -936,23 +947,54 @@
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project details-->
-                                <h2 class="text-uppercase">Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <h2 class="text-uppercase">Lab 4: Motor Driver</h2>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
-                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
-                                    nostrum, reiciendis facere nemo!</p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <strong>Client:</strong>
-                                        Southwest
-                                    </li>
-                                    <li>
-                                        <strong>Category:</strong>
-                                        Website Design
-                                    </li>
-                                </ul>
+                                <p>
+                                    The main purpose of this lab was to establish the connection between the artemis and
+                                    the motors on the robot via motor drivers and connect each part of the previous 2
+                                    labs together.
+                                    This lab involved lots of soldering in order to get the motors working and
+                                    controlled by the artemis.
+                                </p>
+                                <p>
+                                    Prelab: The prelab involved diagraming the wiring for the motor drivers before
+                                    actually soldering the Parts
+                                    together onto the artemis. The diagram can be seen right below this. The methodology
+                                    was that the Artemis
+                                    was meant to send a pwm signal via pins to the input of the motor driver. Then, the
+                                    motor driver would output
+                                    the current needed for the motors to start running at that pwm value. The motor
+                                    drivers also need to be connected to ground
+                                    of the artemis and needed to connect to the positive and negative terminals of vin
+                                    and gnd respectively.
+                                </p>
+                                <img class="img-fluid img-centered" src="assets/Lab3-5Hardware.png" alt="" width="300"
+                                    height="200">
+                                <p>
+                                    Below is an image of the wiring set up for the motor drivers including the full
+                                    robots circuit with
+                                    everything wired together and connect by tape and the soldering of the motor
+                                    drivers. Because both the 2 input and output pins
+                                    should be shorted together(respectively), I soldered the back to connect in1/in2 and
+                                    out1/out2.
+                                </p>
+                                <img class="img-fluid img-centered" src="assets/Lab4bot1.png" alt="" width="300"
+                                    height="200">
+                                <img class="img-fluid img-centered" src="assets/lab4bot2.JPG" alt="" width="300"
+                                    height="200">
+                                <p>
+                                    Next was to make sure the wheels would spin for each pwm value. The pins I soldered
+                                    the motor driver inputs to
+                                    are pins 6,7,11,13. In the videos below, I checked the motors would work for each
+                                    pwm value.
+                                </p>
+
+                                <p>
+                                    Next up was to find the lower limit pwm value for the motors to spin. In the video
+                                    below, you can see that after some testing I found that
+                                    pwm of 40 would cause the wheels to cease to spin.
+                                </p>
+
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
                                     type="button">
                                     <i class="fas fa-xmark me-1"></i>
