@@ -176,6 +176,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Portfolio item 7-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Lab 4: Motor Driver</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1080,7 +1094,74 @@
                                     send the code to python using ble_arduino.
                                     Using this, I was able to figure out the functionality of stopping before the wall
                                     and once hitting the wall, to start moving back in the videos below as well.
+                                </p>
 
+
+                                <p>
+
+                                </p>
+
+                                <ul class="list-inline">
+                                    <strong>Parts required:</strong>
+                                    Sparkfun Artemis Nano, 1x USB cable, 9DOF IMU sensor, 1x Force1RC car,
+                                    1x Li-ion 3.7V 850mAh battery,
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close Tab
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 7 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Lab 5: PID Control</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <p>
+                                    The goal of this lab was to be able to document data from the various sensors of the
+                                    robot
+                                    and use this to monitor the robots location in space and control the robots speed
+                                    and direction autonomously.
+                                    We did this by implementing some form of a PID controller(up to user choice) and
+                                    analyzing the data given to
+                                </p>
+                                <p>
+                                    The prelab consisted of creating the code for calculating the PID value and updating
+                                    the values
+                                    for calculating the multiple measurements needed for the PID value.
+                                    The first thing was to choose what equation actually implement betweent the multiple
+                                    options of PID, PD, PI, P, etc.
+                                    For this part, I chose PD to implement as it seemed like a combination of the
+                                    easiest to implement and has good calculation accuracy.
+                                    Below shows the code that I used to implement the PD equation in Arduino.
+                                </p>
+
+                                <img class="img-fluid img-centered" src="assets/pidcontrol.png" alt="" width="500"
+                                    height="400">
+
+                                <p>
+                                    Using this value, and some extra code, I was able to control when the robot would
+                                    turn forwards, back
+                                    and stop moving. Below shows part of the helper function I created to control this.
+                                    Also in this function, the values of
+                                    error, distance, time, and pd value were continuously updated, making it easier to
+                                    send the code to python using ble_arduino.
+                                    Using this, I was able to figure out the functionality of stopping before the wall
+                                    and once hitting the wall, to start moving back in the videos below as well.
                                 </p>
 
 
