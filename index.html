@@ -1294,37 +1294,30 @@
                                 <h2 class="text-uppercase">Lab 8: Stunts</h2>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
                                 <p>
-                                    The goal of this lab was to be able to implement a Kalman filter for the data
-                                    recieved on the
-                                    robot. This is used to help execute the Lab 5 code much quicker. This allows us to
-                                    make even faster turns/stops
-                                    with the robot. This is done by
+                                    The goal of this lab was to implement a stunt on the robot. We were allowed to
+                                    implement between
+                                    two different stunts. The first one was a calculated flip using the mat given and
+                                    the second was a quick turn
+                                    to go the other way. I chose the second task and implemented the orientation
+                                    control.
                                 </p>
                                 <p>
-                                    The prelab consisted of creating the code for calculating the PID value and updating
-                                    the values
-                                    for calculating the multiple measurements needed for the PID value.
-                                    The first thing was to choose what equation actually implement betweent the multiple
-                                    options of PID, PD, PI, P, etc.
-                                    For this part, I chose PD to implement as it seemed like a combination of the
-                                    easiest to implement and has good calculation accuracy.
-                                    Below shows the code that I used to implement the PD equation in Arduino.
+                                    Prelab: There was no exact prelab for this lab. Most of this lab consisted of
+                                    actually testing your robots to
+                                    implement the stunt given.
+                                </p>
+
+
+
+                                <p>
+                                    For implementing the stunt, my code consisted of creating a loop that would run my
+                                    pidcontrol function we created from
+                                    lab 5. After creating this
+
                                 </p>
 
                                 <img class="img-fluid img-centered" src="assets/pidcontrol.png" alt="" width="500"
                                     height="400">
-
-                                <p>
-                                    Using this value, and some extra code, I was able to control when the robot would
-                                    turn forwards, back
-                                    and stop moving. Below shows part of the helper function I created to control this.
-                                    Also in this function, the values of
-                                    error, distance, time, and pd value were continuously updated, making it easier to
-                                    send the code to python using ble_arduino.
-                                    Using this, I was able to figure out the functionality of stopping before the wall
-                                    and once hitting the wall, to start moving back in the videos below as well.
-                                </p>
-
 
                                 <p>
 
