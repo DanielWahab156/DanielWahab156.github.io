@@ -227,11 +227,11 @@
                         <img class="img-fluid" src="assets/img/portfolio/10.png" alt="..." />
                     </a>
                     <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Lab 8: Stunts</div>
+                        <div class="portfolio-caption-heading">Lab 10: Grid Localization Using Bayes Filter</div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0"></div>
             </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0"></div>
         </div>
     </section>
     <!-- About-->
@@ -1420,86 +1420,54 @@
                                 <h2 class="text-uppercase">Lab 10: Grid Localization Using Bayes Filter</h2>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/10.png" alt="..." />
                                 <p>
-                                    The goal of this lab was to implement a stunt on the robot. We were allowed to
-                                    implement between
-                                    two different stunts. The first one was a calculated flip using the mat given and
-                                    the second was a quick turn
-                                    to go the other way. I chose the second task and implemented the orientation
-                                    control.
+                                    The goal of this lab was to use the simulator that we configured in class to model
+                                    predicted readings of a simulator. Our goal was to be able to map out not only the
+                                    motion path
+                                    of the simulated robot, but the expected path from the bayes filter and the path of
+                                    the odometry readings.
                                 </p>
                                 <p>
-                                    Prelab: There was no exact prelab for this lab. Most of this lab consisted of
-                                    actually testing your robots to
-                                    implement the stunt given.
+                                    Prelab: Again, for this lab, there was no specific prelab for this lab besides
+                                    reading through the instructions.
+                                    However, some clarifications should be made regarding how we are going about
+                                    simulating and using the bayes filter.
+                                    The main clarification is that we are using a
                                 </p>
 
 
 
                                 <p>
-                                    For implementing the stunt, my code consisted of creating a loop that would run my
-                                    pidcontrol function we created from lab 5 in a for loop. Outside the for-loop, I
-                                    called my move forward function
-                                    to have the car continuously move forward. To get the car to turn at a specific
-                                    distance, It involved lots of testing.
-                                    My implementation included an if statement inside the for-loop that would call the
-                                    turn-left command once and then keep iterating through the
-                                    for-loop, calling the moveForward() function quickly after the spin. A code snippet
-                                    of my arduino code can be seen below which shows the if statement to turn the robot.
+                                    Below, you can see the code that was used in regards to the actual implementation of
+                                    the functions needed to implement
+                                    the grid localization.
 
                                 </p>
 
 
-                                <img class="img-fluid img-centered" src="assets/4160Lab8arduino.png" alt="" width="500"
+                                <img class="img-fluid img-centered" src="assets/lab10sensor.png" alt="" width="500"
                                     height="400">
 
-                                <p>
+
+                                <img class="img-fluid img-centered" src="assets/lab10odom.png" alt="" width="500"
+                                    height="400">
+
+                                <img class="img-fluid img-centered" src="assets/lab10prediction.png" alt="" width="500"
+                                    height="400">
+
+                                <img class="img-fluid img-centered" src="assets/lab10update.png" alt="" width="500"
+                                    height="400">
+
 
                                 <p>
-                                    The main issues with this lab was that since the tof sensors only send reading so
-                                    quickly, I needed to decide a value (much larger the the 914 mm needed to turn the
-                                    car at) to start implementing the turn at.
-                                    Also, some of the pid controller was edited to accomodate the task of deciding how
-                                    far away the wall was. I was able to get three successful trials but the turn in
-                                    some of the runs were quite close to the wall.
-                                    This was due to slight issues with TOF placement(mine was angled more during some
-                                    runs which took it longer to spin at the desired point).
+                                    Below, you can also see the results on the trajectory plotter of what happened when
+                                    running the simulation
+                                    concurrently with the code I gave above.
 
                                 </p>
 
-                                <div class="embed-container">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h3R5x0aIcOA"
-                                        frameborder="0" allowfullscreen></iframe>
-
-                                </div>
-
-
-                                <div class="embed-container">
-                                    <iframe width="560" height="315" src=https://youtube.com/embed/WezD5Xmh_xY
-                                        frameborder="0" allowfullscreen></iframe>
-                                </div>
-
-
-                                <div class="embed-container">
-                                    <iframe width="560" height="315" src=https://youtube.com/embed/UxlqbijR6CY
-                                        frameborder="0" allowfullscreen></iframe>
-                                </div>
-
-                                <p>
-                                    Lastly, I documented the data of distance and time for each run and graphed them to
-                                    compare between runs.
-                                    The graphs for two of them have many similarities but one of the graphs for one of
-                                    the runs seems quite different. Below I have them in order,
-                                    corresponding to each video above.
-                                </p>
-
-                                <img class="img-fluid img-centered" src="assets/4160lab8run1graph.png" alt=""
+                                <img class="img-fluid img-centered" src="assets/lab10localization.png" alt=""
                                     width="500" height="400">
 
-                                <img class="img-fluid img-centered" src="assets/4160lab8run2graph.png" alt=""
-                                    width="500" height="400">
-
-                                <img class="img-fluid img-centered" src="assets/4160lab8run3graph.png" alt=""
-                                    width="500" height="400">
 
 
                                 <ul class="list-inline">
