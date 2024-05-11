@@ -233,6 +233,20 @@
             </div>
         </div>
         <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0"></div>
+        <!-- Portfolio item 12-->
+        <div class="portfolio-item">
+            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal12">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid" src="assets/img/portfolio/11.png" alt="..." />
+            </a>
+            <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">Lab 10: Grid Localization Using Bayes Filter</div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0"></div>
         </div>
         </div>
     </section>
@@ -1467,6 +1481,134 @@
                                     implemented.
 
                                 </p>
+
+                                <header class="section-header">
+                                    <h1 class="section-title">Section Header</h1>
+                                    <p class="section-description">Description of the section...</p>
+
+
+                                </header>
+
+
+
+                                <p>
+                                    Below, you can also see the results on the trajectory plotter of what happened when
+                                    running the simulation
+                                    concurrently with the code I gave above.
+
+                                </p>
+
+                                <img class="img-fluid img-centered" src="assets/lab10localization.png" alt=""
+                                    width="500" height="400">
+
+
+
+                                <ul class="list-inline">
+                                    <strong>Parts required:</strong>
+                                    Working artemis based robot
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close Tab
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 12 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Lab 11: Grid Localization on the Real Robot</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/11.png" alt="..." />
+                                <p>
+                                    The goal of this lab was to use the bayes filter we implemented on the last lab
+                                    virtually,
+                                    but expand this to the real robot. This would be done by taking distance readings of
+                                    the robot in 20 degree
+                                    increments and then plotting the measurements on the simulator. Using this and the
+                                    base code from the simulator
+                                    that was already implemented from the last lab, we can use the bayes filter to
+                                    create a predicted path for us.
+                                </p>
+                                <p>
+                                    Prelab: Again, as of the last couple labs, there was no specific prelab for this lab
+                                    besides
+                                    reading through the slides to stregthen knowledge on the task at hand.
+                                </p>
+
+
+
+                                <p>
+                                    The first task was to run the lab 11 sample code to gain insight on what the
+                                    simulator should look like
+                                    when running the code with the simulated robots readings. Below, you can see the
+                                    results for all 3 lines: odom, ground truth, and belief.
+
+                                </p>
+
+                                <img class="img-fluid img-centered" src="assets/lab11pic1.png" alt="" width="500"
+                                    height="400">
+
+                                <p>
+                                    The next test was actually be able to turn our robot in a full 360 circle in 20
+                                    degree increments. Then we would send the data
+                                    of both the time, the distance from the wall, and the angle from the initial
+                                    position taken at. Using these measuremnts, they would be sent to the robot
+                                    to use for the prediction step in th ebayes filter. This is all done in the
+                                    perform_observation_loop function. In terms of actually sending the code to the
+                                    robot,
+                                    this was done using the lab 9 code of implementing the orientation pid loop and
+                                    using that to send distance/angle measurements to our jupyter notebook.
+                                    All of these specific parts of the lab can be seen directly below.
+                                </p>
+
+
+                                <img class="img-fluid img-centered" src="assets/lab10sensor.png" alt="" width="500"
+                                    height="400">
+
+
+                                <p>
+                                    The last part was to run the code
+
+                                </p>
+
+
+                                <img class="img-fluid img-centered" src="assets/lab10odom.png" alt="" width="500"
+                                    height="400">
+
+                                <img class="img-fluid img-centered" src="assets/lab10prediction.png" alt="" width="500"
+                                    height="400">
+
+                                <img class="img-fluid img-centered" src="assets/lab10update.png" alt="" width="500"
+                                    height="400">
+
+
+
+
+                                <p>
+                                    Let's step through each function above and explain their purpose and how they were
+                                    implemented.
+
+                                </p>
+
+                                <header class="section-header">
+                                    <h1 class="section-title">Section Header</h1>
+                                    <p class="section-description">Description of the section...</p>
+
+
+                                </header>
 
 
 
