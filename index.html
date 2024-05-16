@@ -242,7 +242,21 @@
                 <img class="img-fluid" src="assets/img/portfolio/11.png" alt="..." />
             </a>
             <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">Lab 10: Grid Localization Using Bayes Filter</div>
+                <div class="portfolio-caption-heading">Lab 11: Grid Localization on the Real Robot</div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0"></div>
+        <!-- Portfolio item 13-->
+        <div class="portfolio-item">
+            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal13">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img class="img-fluid" src="assets/img/portfolio/12.png" alt="..." />
+            </a>
+            <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">Lab 12: Path Planning and Execution</div>
             </div>
         </div>
         </div>
@@ -1621,6 +1635,131 @@
 
                                 <img class="img-fluid img-centered" src="assets/lab10localization.png" alt=""
                                     width="500" height="400">
+
+
+
+                                <ul class="list-inline">
+                                    <strong>Parts required:</strong>
+                                    Working artemis based robot
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close Tab
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 13 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Lab 12: Path Planning and Execution</h2>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/12.png" alt="..." />
+                                <p>
+                                    As this is our last and final lab, the goal of this lab was quite open ended.
+                                    The main goal was to implement any combination of planning/obstacle avoidance
+                                    algorithms
+                                    on the robot using our old labs. So it should be easy right? Very wrong. As you'll
+                                    see today
+                                    implementing a path planning algorithm on the real robot can be quite difficult.
+
+
+
+
+                                </p>
+
+                                <p>
+                                    Prelab: Again, like the last couple labs, there was no specific prelab for this lab
+                                    besides doing/understanding the last couple of labs.
+                                </p>
+
+                                <h3 class="text-uppercase">The Arduino Code</h3>
+
+
+
+                                <p>
+                                    As I was a bit short on time, my goal was to have the robot take a quick scan of the
+                                    arena by
+                                    doing a 360, then moving forward towards its target location while also uning the
+                                    bug 0 algorithm
+                                    (go as far in a straightline as you can before rashing, then turn). To do this my
+                                    goal was to call a similar
+                                    function from my lab 9/11 orientation control and turn the robot in a full circle to
+                                    get a locak=lized map. Then, based on
+                                    location values given, the robot would move to those positions. Below is pictures of
+                                    my arduino code snippets.
+                                </p>
+
+                                <img class="img-fluid img-centered" src="assets/lab12case.png" alt="" width="500"
+                                    height="400">
+
+                                <img class="img-fluid img-centered" src="assets/lab12control.png" alt="" width="500"
+                                    height="400">
+
+                                <img class="img-fluid img-centered" src="assets/lab12forwardpid.png" alt="" width="500"
+                                    height="400">
+
+                                <h5 class="text-uppercase">Forwardpicontrol()</h5>
+
+                                <p>
+                                    The goal of this function was to take in a position in inches, and run it inside a
+                                    pid control
+                                    loop that will move the robot forward until a certain point which then it will call
+                                    the next function to
+                                    change angle.
+                                </p>
+
+                                <h5 class="text-uppercase">lab11control()</h5>
+                                <p>
+                                    The goal of this function was to intake an angle and have the robot orient itself
+                                    towards that angle position.
+                                    This function served as mostly a derivative to my lab 11 code.
+                                </p>
+
+                                <p>
+                                    Using these functions, the parts needed were all aranged. The python code was quite
+                                    similar to the code I used for other labs.
+                                    Now, we can see my results below.
+                                </p>
+
+                                <div class="embed-container">
+                                    <iframe width="560" height="315" src=https://www.youtube.com/embed/gHG1_8_uBA8e
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                                <div class="embed-container">
+                                    <iframe width="560" height="315" src=https://www.youtube.com/embed/cFVhUeTkrq
+                                        frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                                <p>
+                                    So what happened?
+
+                                </p>
+                                <p>
+                                    There was a bit of a stopping issue with the forward control which may be due to the
+                                    delays I put
+                                    and not giving the robot enough time tokeep moving. Howveer, it could move straight
+                                    and stop infront of walls.
+                                    The circle mapping worked okay every now and then but there is also an error with
+                                    the orientation control so if I
+                                    had more time I would work to debug that so it turn at the correct angle as intended
+                                    (and not 180 degrees).
+
+                                </p>
+
 
 
 
